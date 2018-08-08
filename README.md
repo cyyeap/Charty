@@ -1,2 +1,2 @@
 # charty
-When awesome people gathered around to conquer the world
+when awesome people gathered around to conquer the world
