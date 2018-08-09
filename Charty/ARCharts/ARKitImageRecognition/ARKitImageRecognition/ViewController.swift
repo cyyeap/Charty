@@ -61,6 +61,35 @@ class ViewController: UIViewController {
         return node
     }()
     
+    
+    lazy var netwealthNode: SCNNode = {
+        guard let scene = SCNScene(named: "mountain.scn"),
+            let node = scene.rootNode.childNode(withName: "mountain", recursively: false) else { return SCNNode() }
+        let scaleFactor  = 0.25
+        node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
+        node.eulerAngles.x += -.pi / 2
+        return node
+    }()
+    
+    lazy var nikeNode: SCNNode = {
+        guard let scene = SCNScene(named: "mountain.scn"),
+            let node = scene.rootNode.childNode(withName: "mountain", recursively: false) else { return SCNNode() }
+        let scaleFactor  = 0.25
+        node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
+        node.eulerAngles.x += -.pi / 2
+        return node
+    }()
+    
+    lazy var appleNode: SCNNode = {
+        guard let scene = SCNScene(named: "mountain.scn"),
+            let node = scene.rootNode.childNode(withName: "mountain", recursively: false) else { return SCNNode() }
+        let scaleFactor  = 0.25
+        node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
+        node.eulerAngles.x += -.pi / 2
+        return node
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
@@ -138,6 +167,12 @@ extension ViewController: ARSCNViewDelegate {
             node = mountainNode
         case "Trees In the Dark":
             node = treeNode
+        case "Netwealth":
+            node = netwealthNode
+        case "Apple":
+            node = appleNode
+        case "Nike":
+            node = nikeNode
         default:
             break
         }
