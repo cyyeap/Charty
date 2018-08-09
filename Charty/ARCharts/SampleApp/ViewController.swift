@@ -12,15 +12,18 @@ import SceneKit
 import UIKit
 
 
-class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIPopoverPresentationControllerDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIPopoverPresentationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var chartButton: UIButton!
     @IBOutlet weak var lineChartButton: UIButton!
     @IBOutlet weak var barChartButton: UIButton!
     @IBOutlet weak var pieChartButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var accountPicker: UIPickerView!
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var roundedButtonCollection: [UIButton]!
+    
+    let accounts = ["WRAP012345", "WRAP012346", "WRAP012347", "WRAP012348"]
+
     
     var barChart: ARBarChart?
     
@@ -54,6 +57,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        accountPicker.delegate = self
+        accountPicker.dataSource = self
         
         sceneView.delegate = self
         sceneView.scene = SCNScene()
@@ -408,5 +414,30 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         barChart = nil
     }
     
+    // MARK: Picker Delegates
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return accounts.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return accounts[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        settings.dataSet = row
+        guard barChart != nil else {
+            return
+        }
+        
+        guard let lastPosition = focusSquare.lastPosition else {
+            return
+        }
+        
+        self.addBarChart(at: lastPosition)
+    }
 }

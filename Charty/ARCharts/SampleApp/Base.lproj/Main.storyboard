@@ -56,8 +56,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpt-h8-HES">
-                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qpt-h8-HES">
+                                <rect key="frame" x="1" y="-8" width="375" height="667"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zr-Va-MAu" userLabel="Settings">
                                 <rect key="frame" x="24" y="28" width="80" height="35"/>
@@ -73,18 +73,6 @@
                                     <action selector="handleTapOnSettingsButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="70D-mk-bcd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYI-cv-kE2">
-                                <rect key="frame" x="248" y="612" width="100" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="L8b-QB-qlI"/>
-                                    <constraint firstAttribute="width" constant="100" id="vn6-Nf-q9a"/>
-                                </constraints>
-                                <state key="normal" title="Line Chart"/>
-                                <connections>
-                                    <action selector="handleTapLineChartButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="v3r-hI-M0i"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEF-7m-bVU">
                                 <rect key="frame" x="138" y="612" width="100" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,49 +80,40 @@
                                     <constraint firstAttribute="height" constant="30" id="VOJ-CA-SdY"/>
                                     <constraint firstAttribute="width" constant="100" id="WV0-i3-QxW"/>
                                 </constraints>
-                                <state key="normal" title="Pie Chart"/>
+                                <state key="normal" title="Show Chart"/>
                                 <connections>
                                     <action selector="handleTapPieChartButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Xgb-dw-3X2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quj-g6-jK3">
-                                <rect key="frame" x="28" y="612" width="100" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coi-je-wKO">
+                                <rect key="frame" x="0.0" y="507" width="375" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Wea-kL-8c8"/>
-                                    <constraint firstAttribute="width" constant="100" id="y61-oa-4jJ"/>
+                                    <constraint firstAttribute="width" constant="375" id="qUY-lo-Vog"/>
+                                    <constraint firstAttribute="height" constant="95" id="sDC-WO-9zg"/>
                                 </constraints>
-                                <state key="normal" title="Bar Chart"/>
-                                <connections>
-                                    <action selector="handleTapBarChartButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="78J-AJ-xYO"/>
-                                </connections>
-                            </button>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nEF-7m-bVU" firstAttribute="leading" secondItem="quj-g6-jK3" secondAttribute="trailing" constant="10" id="6Ns-V5-m6Z"/>
-                            <constraint firstItem="nEF-7m-bVU" firstAttribute="baseline" secondItem="quj-g6-jK3" secondAttribute="baseline" id="B8M-Np-nFo"/>
+                            <constraint firstItem="nEF-7m-bVU" firstAttribute="top" secondItem="Coi-je-wKO" secondAttribute="bottom" constant="10" id="A9j-Rr-IuH"/>
                             <constraint firstItem="Qpt-h8-HES" firstAttribute="centerX" secondItem="Woi-8b-Xcb" secondAttribute="centerX" id="CIj-pq-pOY"/>
                             <constraint firstItem="Qpt-h8-HES" firstAttribute="centerY" secondItem="Woi-8b-Xcb" secondAttribute="centerY" id="Fcz-Mn-GnZ"/>
-                            <constraint firstItem="DYI-cv-kE2" firstAttribute="leading" secondItem="nEF-7m-bVU" secondAttribute="trailing" constant="10" id="IGk-Vk-bNg"/>
                             <constraint firstItem="Qpt-h8-HES" firstAttribute="height" secondItem="Woi-8b-Xcb" secondAttribute="height" id="bzk-B2-Kq8"/>
+                            <constraint firstItem="Coi-je-wKO" firstAttribute="centerX" secondItem="Woi-8b-Xcb" secondAttribute="centerX" id="gBf-JE-OiK"/>
                             <constraint firstItem="Qpt-h8-HES" firstAttribute="width" secondItem="Woi-8b-Xcb" secondAttribute="width" id="h3h-vj-3WK"/>
-                            <constraint firstItem="DYI-cv-kE2" firstAttribute="baseline" secondItem="nEF-7m-bVU" secondAttribute="baseline" id="heU-fk-uKh"/>
                             <constraint firstItem="nEF-7m-bVU" firstAttribute="centerX" secondItem="Woi-8b-Xcb" secondAttribute="centerX" id="mJx-T5-x0Z"/>
+                            <constraint firstItem="Coi-je-wKO" firstAttribute="centerX" secondItem="Woi-8b-Xcb" secondAttribute="centerX" id="pWG-3a-pGV"/>
                             <constraint firstItem="4zr-Va-MAu" firstAttribute="top" secondItem="pMZ-aP-02b" secondAttribute="bottom" constant="8" id="uhs-7r-d5S"/>
                             <constraint firstItem="4zr-Va-MAu" firstAttribute="leading" secondItem="Woi-8b-Xcb" secondAttribute="leadingMargin" constant="8" id="xta-5Q-GF4"/>
                             <constraint firstAttribute="bottomMargin" secondItem="nEF-7m-bVU" secondAttribute="bottom" constant="25" id="zfM-33-dgm"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="barChartButton" destination="quj-g6-jK3" id="p95-hn-j2C"/>
-                        <outlet property="lineChartButton" destination="DYI-cv-kE2" id="tQi-Eb-DUB"/>
+                        <outlet property="accountPicker" destination="Coi-je-wKO" id="0TX-3e-VE9"/>
                         <outlet property="pieChartButton" destination="nEF-7m-bVU" id="e0N-Ug-61y"/>
                         <outlet property="sceneView" destination="Qpt-h8-HES" id="bHd-bW-PbX"/>
                         <outlet property="settingsButton" destination="4zr-Va-MAu" id="Scf-f0-uqB"/>
-                        <outletCollection property="roundedButtonCollection" destination="DYI-cv-kE2" collectionClass="NSMutableArray" id="beJ-y9-JUj"/>
                         <outletCollection property="roundedButtonCollection" destination="nEF-7m-bVU" collectionClass="NSMutableArray" id="1iv-3s-MSG"/>
-                        <outletCollection property="roundedButtonCollection" destination="quj-g6-jK3" collectionClass="NSMutableArray" id="AiX-W7-ido"/>
                         <outletCollection property="roundedButtonCollection" destination="4zr-Va-MAu" collectionClass="NSMutableArray" id="gma-xc-a0K"/>
                     </connections>
                 </viewController>
