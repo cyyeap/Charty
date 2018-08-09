@@ -24,13 +24,21 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         }
     }
     private let arKitColors = [
-        UIColor(red: 238.0 / 255.0, green: 109.0 / 255.0, blue: 150.0 / 255.0, alpha: 1.0),
-        UIColor(red: 70.0  / 255.0, green: 150.0 / 255.0, blue: 150.0 / 255.0, alpha: 1.0),
-        UIColor(red: 134.0 / 255.0, green: 218.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0),
-        UIColor(red: 237.0 / 255.0, green: 231.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0),
-        UIColor(red: 0.0   / 255.0, green: 110.0 / 255.0, blue: 235.0 / 255.0, alpha: 1.0),
-        UIColor(red: 193.0 / 255.0, green: 193.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0),
-        UIColor(red: 84.0  / 255.0, green: 204.0 / 255.0, blue: 254.0 / 255.0, alpha: 1.0)
+        UIColor(red: 0.0 / 255.0, green: 53.0 / 255.0, blue: 142.0 / 255.0, alpha: 1.0),
+        UIColor(red: 0.0  / 255.0, green: 120.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0),
+        UIColor(red: 0.0 / 255.0, green: 199.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0),
+        
+        UIColor(red: 109.0 / 255.0, green: 0.0 / 255.0, blue: 99.0 / 255.0, alpha: 1.0),
+        UIColor(red: 240.0   / 255.0, green: 0.0 / 255.0, blue: 140.0 / 255.0, alpha: 1.0),
+        UIColor(red: 249.0 / 255.0, green: 125.0 / 255.0, blue: 217.0 / 255.0, alpha: 1.0),
+        
+        UIColor(red: 0.0  / 255.0, green: 94.0 / 255.0, blue: 46.0 / 255.0, alpha: 1.0),
+        UIColor(red: 0.0  / 255.0, green: 175.0 / 255.0, blue: 50.0 / 255.0, alpha: 1.0),
+        UIColor(red: 160.0  / 255.0, green: 220.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0),
+        
+        UIColor(red: 185.0  / 255.0, green: 10.0 / 255.0, blue: 45.0 / 255.0, alpha: 1.0),
+        UIColor(red: 255.0  / 255.0, green: 105.0 / 255.0, blue: 30.0 / 255.0, alpha: 1.0),
+        UIColor(red: 255.0  / 255.0, green: 190.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
     ]
     
     var session: ARSession {
