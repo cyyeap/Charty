@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wlO-c7-1ir">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wlO-c7-1ir">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Adelle Sans Regular.ttf">
+            <string>AdelleSans-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Welcome Controller-->
         <scene sceneID="fRv-N4-U32">
@@ -21,14 +26,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NW Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Rae-Cj-CZm">
+                                <rect key="frame" x="20" y="30" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="AMb-te-O0v">
-                                <rect key="frame" x="67" y="157" width="240" height="250"/>
+                                <rect key="frame" x="67" y="157" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRv-DS-mv4">
-                                <rect key="frame" x="170" y="399" width="34" height="30"/>
+                                <rect key="frame" x="172" y="415" width="30" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Regular" family="Adelle Sans" pointSize="15"/>
+                                <state key="normal" title="start"/>
                                 <connections>
                                     <action selector="tapStartButton:" destination="wlO-c7-1ir" eventType="touchUpInside" id="JBY-ce-fFb"/>
                                 </connections>
@@ -42,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcu-XB-23l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559" y="36"/>
+            <point key="canvasLocation" x="-559.20000000000005" y="35.532233883058474"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -59,39 +69,49 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qpt-h8-HES">
                                 <rect key="frame" x="1" y="-8" width="375" height="667"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zr-Va-MAu" userLabel="Settings">
-                                <rect key="frame" x="24" y="28" width="80" height="35"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="KCv-ce-YJC"/>
-                                    <constraint firstAttribute="height" constant="35" id="lsN-Ao-6Tc"/>
-                                </constraints>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" red="0.16028749942779541" green="0.5866771936416626" blue="0.86923080682754517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="handleTapOnSettingsButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="70D-mk-bcd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEF-7m-bVU">
-                                <rect key="frame" x="138" y="612" width="100" height="30"/>
+                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEF-7m-bVU">
+                                <rect key="frame" x="137.5" y="612" width="120" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VOJ-CA-SdY"/>
-                                    <constraint firstAttribute="width" constant="100" id="WV0-i3-QxW"/>
+                                    <constraint firstAttribute="width" constant="120" id="WV0-i3-QxW"/>
                                 </constraints>
-                                <state key="normal" title="Show Chart"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Show Chart" image="Market Summary">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled" image="Market Summary"/>
+                                <state key="selected" image="Market Summary"/>
+                                <state key="highlighted" image="Market Summary"/>
                                 <connections>
                                     <action selector="handleTapPieChartButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Xgb-dw-3X2"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coi-je-wKO">
+                            <pickerView alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coi-je-wKO">
                                 <rect key="frame" x="0.0" y="507" width="375" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="qUY-lo-Vog"/>
                                     <constraint firstAttribute="height" constant="95" id="sDC-WO-9zg"/>
                                 </constraints>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zr-Va-MAu" userLabel="Settings">
+                                <rect key="frame" x="16" y="40" width="24" height="24"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="KCv-ce-YJC"/>
+                                    <constraint firstAttribute="height" constant="24" id="lsN-Ao-6Tc"/>
+                                </constraints>
+                                <state key="normal" image="Settings">
+                                    <color key="titleColor" red="0.16028749942779541" green="0.5866771936416626" blue="0.86923080682754517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled" image="Settings"/>
+                                <state key="selected" image="Settings"/>
+                                <state key="highlighted" image="Settings"/>
+                                <connections>
+                                    <action selector="handleTapOnSettingsButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="70D-mk-bcd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -103,8 +123,8 @@
                             <constraint firstItem="Qpt-h8-HES" firstAttribute="width" secondItem="Woi-8b-Xcb" secondAttribute="width" id="h3h-vj-3WK"/>
                             <constraint firstItem="nEF-7m-bVU" firstAttribute="centerX" secondItem="Woi-8b-Xcb" secondAttribute="centerX" id="mJx-T5-x0Z"/>
                             <constraint firstItem="Coi-je-wKO" firstAttribute="centerX" secondItem="Woi-8b-Xcb" secondAttribute="centerX" id="pWG-3a-pGV"/>
-                            <constraint firstItem="4zr-Va-MAu" firstAttribute="top" secondItem="pMZ-aP-02b" secondAttribute="bottom" constant="8" id="uhs-7r-d5S"/>
-                            <constraint firstItem="4zr-Va-MAu" firstAttribute="leading" secondItem="Woi-8b-Xcb" secondAttribute="leadingMargin" constant="8" id="xta-5Q-GF4"/>
+                            <constraint firstItem="4zr-Va-MAu" firstAttribute="top" secondItem="pMZ-aP-02b" secondAttribute="bottom" constant="20" id="uhs-7r-d5S"/>
+                            <constraint firstItem="4zr-Va-MAu" firstAttribute="leading" secondItem="Woi-8b-Xcb" secondAttribute="leadingMargin" id="xta-5Q-GF4"/>
                             <constraint firstAttribute="bottomMargin" secondItem="nEF-7m-bVU" secondAttribute="bottom" constant="25" id="zfM-33-dgm"/>
                         </constraints>
                     </view>
@@ -300,5 +320,8 @@
     </scenes>
     <resources>
         <image name="Logo" width="250" height="250"/>
+        <image name="Market Summary" width="24" height="24"/>
+        <image name="NW Logo" width="96" height="96"/>
+        <image name="Settings" width="24" height="24"/>
     </resources>
 </document>

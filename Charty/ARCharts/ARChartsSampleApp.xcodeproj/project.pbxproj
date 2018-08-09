@@ -12,6 +12,11 @@
 		20E02D151F281686009DE002 /* ARBarChartBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D141F281686009DE002 /* ARBarChartBar.swift */; };
 		20E02D171F282D0C009DE002 /* ARChartHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D161F282D0C009DE002 /* ARChartHighlighter.swift */; };
 		20E02D191F283C6C009DE002 /* CABasicAnimation+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D181F283C6C009DE002 /* CABasicAnimation+Utilities.swift */; };
+		38141A95211C48F300454C7D /* Adelle Sans SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38141A90211C48F200454C7D /* Adelle Sans SemiBold.ttf */; };
+		38141A96211C48F300454C7D /* Adelle Sans Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38141A91211C48F200454C7D /* Adelle Sans Thin.ttf */; };
+		38141A97211C48F300454C7D /* Adelle Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38141A92211C48F200454C7D /* Adelle Sans Regular.ttf */; };
+		38141A98211C48F300454C7D /* Adelle Sans Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38141A93211C48F300454C7D /* Adelle Sans Light.ttf */; };
+		38141A99211C48F300454C7D /* Adelle Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38141A94211C48F300454C7D /* Adelle Sans Bold.ttf */; };
 		609D2725211BE9B000589B0A /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609D2724211BE9B000589B0A /* WelcomeController.swift */; };
 		7D9C8E11211BDCA000C23D0B /* DataSample_2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */; };
 		7D9C8E12211BDCA000C23D0B /* DataSample_3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */; };
@@ -80,6 +85,11 @@
 		20E02D141F281686009DE002 /* ARBarChartBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBarChartBar.swift; sourceTree = "<group>"; };
 		20E02D161F282D0C009DE002 /* ARChartHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARChartHighlighter.swift; sourceTree = "<group>"; };
 		20E02D181F283C6C009DE002 /* CABasicAnimation+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Utilities.swift"; sourceTree = "<group>"; };
+		38141A90211C48F200454C7D /* Adelle Sans SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adelle Sans SemiBold.ttf"; sourceTree = "<group>"; };
+		38141A91211C48F200454C7D /* Adelle Sans Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adelle Sans Thin.ttf"; sourceTree = "<group>"; };
+		38141A92211C48F200454C7D /* Adelle Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adelle Sans Regular.ttf"; sourceTree = "<group>"; };
+		38141A93211C48F300454C7D /* Adelle Sans Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adelle Sans Light.ttf"; sourceTree = "<group>"; };
+		38141A94211C48F300454C7D /* Adelle Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adelle Sans Bold.ttf"; sourceTree = "<group>"; };
 		609D2724211BE9B000589B0A /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_2.csv; sourceTree = "<group>"; };
 		7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_3.csv; sourceTree = "<group>"; };
@@ -153,6 +163,18 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		38141A8F211C48CD00454C7D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				38141A94211C48F300454C7D /* Adelle Sans Bold.ttf */,
+				38141A93211C48F300454C7D /* Adelle Sans Light.ttf */,
+				38141A92211C48F200454C7D /* Adelle Sans Regular.ttf */,
+				38141A90211C48F200454C7D /* Adelle Sans SemiBold.ttf */,
+				38141A91211C48F200454C7D /* Adelle Sans Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C36287391F0E084800B6598D = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +198,7 @@
 		C36287441F0E084800B6598D /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				38141A8F211C48CD00454C7D /* Fonts */,
 				20D557CF1F1C0C3D00924685 /* Data */,
 				C36287451F0E084800B6598D /* AppDelegate.swift */,
 				C36287491F0E084800B6598D /* ViewController.swift */,
@@ -338,12 +361,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9C8E12211BDCA000C23D0B /* DataSample_3.csv in Resources */,
+				38141A99211C48F300454C7D /* Adelle Sans Bold.ttf in Resources */,
+				38141A96211C48F300454C7D /* Adelle Sans Thin.ttf in Resources */,
+				38141A98211C48F300454C7D /* Adelle Sans Light.ttf in Resources */,
 				C36287521F0E084800B6598D /* LaunchScreen.storyboard in Resources */,
 				C362874F1F0E084800B6598D /* Assets.xcassets in Resources */,
 				20D557D31F1C0E0800924685 /* DataSample_0.csv in Resources */,
 				C362874D1F0E084800B6598D /* Main.storyboard in Resources */,
 				C3C2EC6B1F2543D2001EC280 /* DataSample_1.csv in Resources */,
+				38141A97211C48F300454C7D /* Adelle Sans Regular.ttf in Resources */,
 				7D9C8E11211BDCA000C23D0B /* DataSample_2.csv in Resources */,
+				38141A95211C48F300454C7D /* Adelle Sans SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,10 +582,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4592R89QZS;
+				DEVELOPMENT_TEAM = 499PRHR49N;
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BEM.ARChartsSampleApp.Arend;
+				PRODUCT_BUNDLE_IDENTIFIER = BEM.ARChartsSampleApp.CarinaA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -573,10 +601,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4592R89QZS;
+				DEVELOPMENT_TEAM = 499PRHR49N;
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BEM.ARChartsSampleApp.Arend;
+				PRODUCT_BUNDLE_IDENTIFIER = BEM.ARChartsSampleApp.CarinaA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

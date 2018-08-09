@@ -20,6 +20,9 @@ public struct ARChartHighlighter {
     public let animationDuration: TimeInterval
     public var highlightedSeries: Int?
     public var highlightedIndex: Int?
+    public var dataSource: ARBarChartDataSource?
+    public var delegate: ARBarChartDelegate?
+
     
     private let defaultFadedOpacity: Float = 0.15
     
@@ -80,7 +83,7 @@ public struct ARChartHighlighter {
                 }
             } else if let labelNode = node as? ARChartLabel {
                 if (series != nil && labelNode.type == .series && labelNode.id != series!)
-                    || (index != nil && labelNode.type == .index && labelNode.id != index!) {
+                    || (index != nil && labelNode.type == .index && labelNode.id != index!) || (index != nil && series != nil && labelNode.type == .title && labelNode.id != Int("\(series!)\(index!)")) {
                     let startingOpacity: Float = isHighlighting ? 1.0 : defaultFadedOpacity
                     let finalOpacity: Float = isHighlighting ? defaultFadedOpacity : 1.0
                     let opacityAnimation = CABasicAnimation.animation(forKey: "opacity", from: startingOpacity, to: finalOpacity, duration: animationDuration, delay: nil)

@@ -22,7 +22,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var roundedButtonCollection: [UIButton]!
     
-    let accounts = ["WRAP012345", "WRAP012346", "WRAP012347", "WRAP012348"]
+    let accounts = ["Rate of Return - Last 5 Years ", "Asset Allocation", "Cumulative vs Monthly Return", "Portfolio Value vs Net Investment"]
 
     
     var barChart: ARBarChart?{
@@ -94,7 +94,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         setupRotationGesture()
         setupHighlightGesture()
         
-        addLightSource(ofType: .omni)
+        addLightSource(ofType: .ambient)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -140,7 +140,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         var indexLabels = Array(0..<values.first!.count).map({ "Index \($0)" })
         
         
-        if settings.dataSet > 0 {
+        if settings.dataSet > -1 {
             values = generateNumbers(fromDataSampleWithIndex: settings.dataSet) ?? values
             seriesLabels = parseSeriesLabels(fromDataSampleWithIndex: settings.dataSet) ?? seriesLabels
             indexLabels = parseIndexLabels(fromDataSampleWithIndex: settings.dataSet) ?? indexLabels
@@ -298,6 +298,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
                 barChart?.highlightIndex(labelNode.id, withAnimationStyle: animationStyle, withAnimationDuration: animationDuration)
             case .series:
                 barChart?.highlightSeries(labelNode.id, withAnimationStyle: animationStyle, withAnimationDuration: animationDuration)
+            case .title:
+                barChart?.highlightIndex(labelNode.id, withAnimationStyle: animationStyle, withAnimationDuration: animationDuration)
             }
         }
         
