@@ -12,6 +12,9 @@
 		20E02D151F281686009DE002 /* ARBarChartBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D141F281686009DE002 /* ARBarChartBar.swift */; };
 		20E02D171F282D0C009DE002 /* ARChartHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D161F282D0C009DE002 /* ARChartHighlighter.swift */; };
 		20E02D191F283C6C009DE002 /* CABasicAnimation+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D181F283C6C009DE002 /* CABasicAnimation+Utilities.swift */; };
+		7D9C8E0E211BD8B800C23D0B /* AccountSnapshot_CumNet_Bar.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E0D211BD8B800C23D0B /* AccountSnapshot_CumNet_Bar.csv */; };
+		7D9C8E11211BDCA000C23D0B /* DataSample_2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */; };
+		7D9C8E12211BDCA000C23D0B /* DataSample_3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */; };
 		C36287461F0E084800B6598D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36287451F0E084800B6598D /* AppDelegate.swift */; };
 		C362874A1F0E084800B6598D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36287491F0E084800B6598D /* ViewController.swift */; };
 		C362874D1F0E084800B6598D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362874B1F0E084800B6598D /* Main.storyboard */; };
@@ -77,6 +80,9 @@
 		20E02D141F281686009DE002 /* ARBarChartBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBarChartBar.swift; sourceTree = "<group>"; };
 		20E02D161F282D0C009DE002 /* ARChartHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARChartHighlighter.swift; sourceTree = "<group>"; };
 		20E02D181F283C6C009DE002 /* CABasicAnimation+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Utilities.swift"; sourceTree = "<group>"; };
+		7D9C8E0D211BD8B800C23D0B /* AccountSnapshot_CumNet_Bar.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AccountSnapshot_CumNet_Bar.csv; sourceTree = "<group>"; };
+		7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_2.csv; sourceTree = "<group>"; };
+		7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_3.csv; sourceTree = "<group>"; };
 		C36287421F0E084800B6598D /* ARChartsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARChartsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36287451F0E084800B6598D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36287491F0E084800B6598D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 		20D557CF1F1C0C3D00924685 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */,
+				7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */,
+				7D9C8E0D211BD8B800C23D0B /* AccountSnapshot_CumNet_Bar.csv */,
 				20D557D01F1C0C3D00924685 /* DataSample_0.csv */,
 				C3C2EC6A1F2543D2001EC280 /* DataSample_1.csv */,
 			);
@@ -328,11 +337,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D9C8E12211BDCA000C23D0B /* DataSample_3.csv in Resources */,
+				7D9C8E0E211BD8B800C23D0B /* AccountSnapshot_CumNet_Bar.csv in Resources */,
 				C36287521F0E084800B6598D /* LaunchScreen.storyboard in Resources */,
 				C362874F1F0E084800B6598D /* Assets.xcassets in Resources */,
 				20D557D31F1C0E0800924685 /* DataSample_0.csv in Resources */,
 				C362874D1F0E084800B6598D /* Main.storyboard in Resources */,
 				C3C2EC6B1F2543D2001EC280 /* DataSample_1.csv in Resources */,
+				7D9C8E11211BDCA000C23D0B /* DataSample_2.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +471,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 499PRHR49N;
+				DEVELOPMENT_TEAM = Q3P4XRFR72;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -478,7 +490,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -515,7 +527,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 499PRHR49N;
+				DEVELOPMENT_TEAM = Q3P4XRFR72;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -528,6 +540,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -541,10 +554,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499PRHR49N;
+				DEVELOPMENT_TEAM = Q3P4XRFR72;
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BEM.ARChartsSampleApp.carina;
+				PRODUCT_BUNDLE_IDENTIFIER = BEM.ARChartsSampleApp.CY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -560,10 +573,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 499PRHR49N;
+				DEVELOPMENT_TEAM = Q3P4XRFR72;
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BEM.ARChartsSampleApp.carina;
+				PRODUCT_BUNDLE_IDENTIFIER = BEM.ARChartsSampleApp.CY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
