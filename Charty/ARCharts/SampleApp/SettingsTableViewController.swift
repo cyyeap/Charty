@@ -63,11 +63,11 @@ class SettingsTableViewController: UITableViewController {
         heightLabel.text = String(format: "Height: %.1f", settings.graphHeight)
         lengthLabel.text = String(format: "Length: %.1f", settings.graphLength)
         dataSetSegmentedControl.selectedSegmentIndex = settings.dataSet
-        if dataSetSegmentedControl.selectedSegmentIndex != 0 {
-            randomDataSetCell.isHidden = true
-        } else {
-            randomDataSetCell.isHidden = false
-        }
+        //if dataSetSegmentedControl.selectedSegmentIndex != 0 {
+            //randomDataSetCell.isHidden = true
+        //} else {
+            //randomDataSetCell.isHidden = false
+        //}
     }
     
     // MARK: Actions
@@ -99,11 +99,11 @@ class SettingsTableViewController: UITableViewController {
     
     @IBAction func handleDataSetValueChange(_ sender: UISegmentedControl) {
         settings?.dataSet = sender.selectedSegmentIndex
-        if sender.selectedSegmentIndex == 0 {
-            randomDataSetCell.isHidden = false
-        } else {
-            randomDataSetCell.isHidden = true
-        }
+        //if sender.selectedSegmentIndex == 0 {
+        //    randomDataSetCell.isHidden = false
+        //} else {
+        //    randomDataSetCell.isHidden = true
+        //}
     }
         
     @IBAction func handleWidthSliderValueChange(_ sender: UISlider) {
