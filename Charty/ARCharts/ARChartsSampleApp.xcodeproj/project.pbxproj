@@ -12,6 +12,7 @@
 		20E02D151F281686009DE002 /* ARBarChartBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D141F281686009DE002 /* ARBarChartBar.swift */; };
 		20E02D171F282D0C009DE002 /* ARChartHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D161F282D0C009DE002 /* ARChartHighlighter.swift */; };
 		20E02D191F283C6C009DE002 /* CABasicAnimation+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D181F283C6C009DE002 /* CABasicAnimation+Utilities.swift */; };
+		38141A81211C064D00454C7D /* Viva in Resources */ = {isa = PBXBuildFile; fileRef = 38141A80211C064C00454C7D /* Viva */; };
 		609D2725211BE9B000589B0A /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609D2724211BE9B000589B0A /* WelcomeController.swift */; };
 		7D9C8E11211BDCA000C23D0B /* DataSample_2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */; };
 		7D9C8E12211BDCA000C23D0B /* DataSample_3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */; };
@@ -80,6 +81,7 @@
 		20E02D141F281686009DE002 /* ARBarChartBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBarChartBar.swift; sourceTree = "<group>"; };
 		20E02D161F282D0C009DE002 /* ARChartHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARChartHighlighter.swift; sourceTree = "<group>"; };
 		20E02D181F283C6C009DE002 /* CABasicAnimation+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Utilities.swift"; sourceTree = "<group>"; };
+		38141A80211C064C00454C7D /* Viva */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Viva; path = ARCharts/Viva; sourceTree = SOURCE_ROOT; };
 		609D2724211BE9B000589B0A /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_2.csv; sourceTree = "<group>"; };
 		7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_3.csv; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		C3C2EC441F1A83B3001EC280 /* ARCharts */ = {
 			isa = PBXGroup;
 			children = (
+				38141A80211C064C00454C7D /* Viva */,
 				C3C2EC451F1A83B3001EC280 /* ARCharts.h */,
 				C3C2EC461F1A83B3001EC280 /* Info.plist */,
 				FCE582F51F27206F002D469B /* ARChartPresenter.swift */,
@@ -351,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38141A81211C064D00454C7D /* Viva in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
