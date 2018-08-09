@@ -120,9 +120,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         
         
         if settings.dataSet > 0 {
-            values = generateNumbers(fromDataSampleWithIndex: settings.dataSet - 1) ?? values
-            seriesLabels = parseSeriesLabels(fromDataSampleWithIndex: settings.dataSet - 1) ?? seriesLabels
-            indexLabels = parseIndexLabels(fromDataSampleWithIndex: settings.dataSet - 1) ?? indexLabels
+            values = generateNumbers(fromDataSampleWithIndex: settings.dataSet) ?? values
+            seriesLabels = parseSeriesLabels(fromDataSampleWithIndex: settings.dataSet) ?? seriesLabels
+            indexLabels = parseIndexLabels(fromDataSampleWithIndex: settings.dataSet) ?? indexLabels
         }
         
         dataSeries = ARDataSeries(withValues: values)
