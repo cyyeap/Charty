@@ -12,7 +12,7 @@
 		63B119262060F29400A7E3BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B119242060F29400A7E3BD /* Main.storyboard */; };
 		63B119282060F29400A7E3BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B119272060F29400A7E3BD /* Assets.xcassets */; };
 		63B1192B2060F29400A7E3BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B119292060F29400A7E3BD /* LaunchScreen.storyboard */; };
-		7DF78795211C06B2009E4157 /* book.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DF78794211C06B2009E4157 /* book.jpg */; };
+		7DAE7638211C1EA400B7E6B5 /* book.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE7637211C1EA400B7E6B5 /* book.jpg */; };
 		F4B7DB08207DA862007CB607 /* tree.scn in Resources */ = {isa = PBXBuildFile; fileRef = F4B7DB00207DA862007CB607 /* tree.scn */; };
 		F4B7DB09207DA862007CB607 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B7DB01207DA862007CB607 /* tree.png */; };
 		F4B7DB0A207DA862007CB607 /* 3D Models Credits.md in Resources */ = {isa = PBXBuildFile; fileRef = F4B7DB02207DA862007CB607 /* 3D Models Credits.md */; };
@@ -28,7 +28,7 @@
 		63B119272060F29400A7E3BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63B1192A2060F29400A7E3BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63B1192C2060F29500A7E3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DF78794211C06B2009E4157 /* book.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = book.jpg; path = ../../../../../../Downloads/book.jpg; sourceTree = "<group>"; };
+		7DAE7637211C1EA400B7E6B5 /* book.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book.jpg; sourceTree = "<group>"; };
 		F4B7DB00207DA862007CB607 /* tree.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = tree.scn; sourceTree = "<group>"; };
 		F4B7DB01207DA862007CB607 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		F4B7DB02207DA862007CB607 /* 3D Models Credits.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "3D Models Credits.md"; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		F4B7DB03207DA862007CB607 /* Book */ = {
 			isa = PBXGroup;
 			children = (
-				7DF78794211C06B2009E4157 /* book.jpg */,
+				7DAE7637211C1EA400B7E6B5 /* book.jpg */,
 				F4B7DB05207DA862007CB607 /* book.scn */,
 			);
 			path = Book;
@@ -179,7 +179,7 @@
 				F4B7DB0D207DA862007CB607 /* mountain.scn in Resources */,
 				F4B7DB08207DA862007CB607 /* tree.scn in Resources */,
 				F4B7DB0A207DA862007CB607 /* 3D Models Credits.md in Resources */,
-				7DF78795211C06B2009E4157 /* book.jpg in Resources */,
+				7DAE7638211C1EA400B7E6B5 /* book.jpg in Resources */,
 				F4B7DB0C207DA862007CB607 /* book.scn in Resources */,
 				63B119262060F29400A7E3BD /* Main.storyboard in Resources */,
 			);
