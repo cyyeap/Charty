@@ -25,7 +25,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     let accounts = ["WRAP012345", "WRAP012346", "WRAP012347", "WRAP012348"]
 
     
-    var barChart: ARBarChart?
+    var barChart: ARBarChart?{
+        didSet {
+            pieChartButton.setTitle(barChart == nil ? "Show Chart" : "Hide Chart", for: .normal)
+        }
+    }
     
     private let arKitColors = [
         UIColor(red: 0.0 / 255.0, green: 53.0 / 255.0, blue: 142.0 / 255.0, alpha: 1.0),
