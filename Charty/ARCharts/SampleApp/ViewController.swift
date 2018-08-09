@@ -15,8 +15,12 @@ import UIKit
 class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var chartButton: UIButton!
+    @IBOutlet weak var lineChartButton: UIButton!
+    @IBOutlet weak var barChartButton: UIButton!
+    @IBOutlet weak var pieChartButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet var roundedButtonCollection: [UIButton]!
     
     var barChart: ARBarChart? {
         didSet {
@@ -72,8 +76,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
             camera.minimumExposure = -1
         }
         
-        chartButton.layer.cornerRadius = 5.0
-        chartButton.clipsToBounds = true
+        for button in roundedButtonCollection {
+            button.layer.cornerRadius = 5.0
+            button.clipsToBounds = true
+        }
         settingsButton.layer.cornerRadius = 5.0
         settingsButton.clipsToBounds = true
         
@@ -217,6 +223,22 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     // MARK: - Actions
     
     @IBAction func handleTapChartButton(_ sender: UIButton) {
+        renderBarChart(button: "chart")
+    }
+    
+    @IBAction func handleTapBarChartButton(_ sender: UIButton) {
+        renderBarChart(button: "bar")
+    }
+    
+    @IBAction func handleTapPieChartButton(_ sender: UIButton) {
+        renderBarChart(button: "pie")
+    }
+    
+    @IBAction func handleTapLineChartButton(_ sender: UIButton) {
+        renderBarChart(button: "line")
+    }
+    
+    func renderBarChart(button: String) {
         guard let lastPosition = focusSquare.lastPosition else {
             return
         }
