@@ -1,0 +1,74 @@
+[
+  {
+    "endDate": "2017-09-08T00:00:00+10:00",
+    "date": "8/09/2017",
+    "cumulativeReturn": -0.0048048579,
+    "monthlyReturn": -0.0048048579
+  },
+  {
+    "endDate": "2017-10-08T00:00:00+11:00",
+    "date": "8/10/2017",
+    "cumulativeReturn": 0.0305043303,
+    "monthlyReturn": 0.0354796629
+  },
+  {
+    "endDate": "2017-11-08T00:00:00+11:00",
+    "date": "8/11/2017",
+    "cumulativeReturn": 0.1146026278,
+    "monthlyReturn": 0.0816088735
+  },
+  {
+    "endDate": "2017-12-08T00:00:00+11:00",
+    "date": "8/12/2017",
+    "cumulativeReturn": 0.1115758792,
+    "monthlyReturn": -0.0021107644
+  },
+  {
+    "endDate": "2018-01-08T00:00:00+11:00",
+    "date": "8/01/2018",
+    "cumulativeReturn": 0.1387798353,
+    "monthlyReturn": 0.0245538998
+  },
+  {
+    "endDate": "2018-02-08T00:00:00+11:00",
+    "date": "8/02/2018",
+    "cumulativeReturn": 0.0981620072,
+    "monthlyReturn": -0.0341759042
+  },
+  {
+    "endDate": "2018-03-08T00:00:00+11:00",
+    "date": "8/03/2018",
+    "cumulativeReturn": 0.1128239836,
+    "monthlyReturn": 0.0133731622
+  },
+  {
+    "endDate": "2018-04-08T00:00:00+10:00",
+    "date": "8/04/2018",
+    "cumulativeReturn": 0.1073789907,
+    "monthlyReturn": -0.0045024696
+  },
+  {
+    "endDate": "2018-05-08T00:00:00+10:00",
+    "date": "8/05/2018",
+    "cumulativeReturn": 0.1227976726,
+    "monthlyReturn": 0.0139021943
+  },
+  {
+    "endDate": "2018-06-08T00:00:00+10:00",
+    "date": "8/06/2018",
+    "cumulativeReturn": 0.1313517107,
+    "monthlyReturn": 0.0077045065
+  },
+  {
+    "endDate": "2018-07-08T00:00:00+10:00",
+    "date": "8/07/2018",
+    "cumulativeReturn": 0.1504079011,
+    "monthlyReturn": 0.0167794716
+  },
+  {
+    "endDate": "2018-08-08T00:00:00+10:00",
+    "date": "8/08/2018",
+    "cumulativeReturn": 0.1376563636,
+    "monthlyReturn": -0.0107782016
+  }
+]

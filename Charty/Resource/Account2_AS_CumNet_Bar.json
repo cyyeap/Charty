@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2016-08-08T00:00:00+10:00",
+    "netInvestment": 1572170.51,
+    "portfolioValue": 1563311.168463437,
+    "dateLabel": "8/08/2016"
+  },
+  {
+    "date": "2017-02-08T00:00:00+11:00",
+    "netInvestment": 1572170.51,
+    "portfolioValue": 1647713.652860621,
+    "dateLabel": "8/02/2017"
+  },
+  {
+    "date": "2017-08-08T00:00:00+10:00",
+    "netInvestment": 1692170.51,
+    "portfolioValue": 1888755.1196740058,
+    "dateLabel": "8/08/2017"
+  },
+  {
+    "date": "2018-02-08T00:00:00+11:00",
+    "netInvestment": 1782170.51,
+    "portfolioValue": 2167755.8104454097,
+    "dateLabel": "8/02/2018"
+  },
+  {
+    "date": "2018-08-08T00:00:00+10:00",
+    "netInvestment": 1782170.51,
+    "portfolioValue": 2247344.5161056654,
+    "dateLabel": "8/08/2018"
+  }
+]
