@@ -16,12 +16,12 @@ class ViewController: UIViewController {
     
     let fadeDuration: TimeInterval = 0.3
     let rotateDuration: TimeInterval = 3
-    let waitDuration: TimeInterval = 0.5
+    let waitDuration: TimeInterval = 15
     
     lazy var fadeAndSpinAction: SCNAction = {
         return .sequence([
             .fadeIn(duration: fadeDuration),
-            .rotateBy(x: 0, y: 0, z: CGFloat.pi * 360 / 180, duration: rotateDuration),
+            //.rotateBy(x: 0, y: 0, z: CGFloat.pi * 360 / 180, duration: rotateDuration),
             .wait(duration: waitDuration),
             .fadeOut(duration: fadeDuration)
             ])
@@ -63,11 +63,18 @@ class ViewController: UIViewController {
     
     
     lazy var netwealthNode: SCNNode = {
-        guard let scene = SCNScene(named: "mountain.scn"),
-            let node = scene.rootNode.childNode(withName: "mountain", recursively: false) else { return SCNNode() }
-        let scaleFactor  = 0.25
+        let material = SCNMaterial()
+        material.diffuse.contents = UIColor.blue
+        
+        let text = SCNText(string: "Netwealth", extrusionDepth: 1)
+        text.materials = [material]
+        
+        let node = SCNNode()
+        let scaleFactor  = 0.01
         node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
-        node.eulerAngles.x += -.pi / 2
+        node.eulerAngles.y += -.pi / 2
+        node.geometry = text
+        
         return node
     }()
     
@@ -162,17 +169,17 @@ extension ViewController: ARSCNViewDelegate {
         var node = SCNNode()
         switch name {
         case "Book":
-            node = bookNode
-        case "Snow Mountain":
-            node = mountainNode
+            node = netwealthNode//bookNode
+        //case "Snow Mountain":
+            //node = mountainNode
         case "Trees In the Dark":
             node = treeNode
-        case "Netwealth":
-            node = netwealthNode
-        case "Apple":
-            node = appleNode
-        case "Nike":
-            node = nikeNode
+        //case "Netwealth":
+            //node = netwealthNode
+        //case "Apple":
+            //node = appleNode
+        //case "Nike":
+            //node = nikeNode
         default:
             break
         }
