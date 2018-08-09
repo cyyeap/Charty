@@ -22,11 +22,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var roundedButtonCollection: [UIButton]!
     
-    var barChart: ARBarChart? {
-        didSet {
-            chartButton.setTitle(barChart == nil ? "Add Chart" : "Remove Chart", for: .normal)
-        }
-    }
+    var barChart: ARBarChart?
+    
     private let arKitColors = [
         UIColor(red: 0.0 / 255.0, green: 53.0 / 255.0, blue: 142.0 / 255.0, alpha: 1.0),
         UIColor(red: 0.0  / 255.0, green: 120.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0),
