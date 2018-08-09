@@ -12,7 +12,6 @@
 		20E02D151F281686009DE002 /* ARBarChartBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D141F281686009DE002 /* ARBarChartBar.swift */; };
 		20E02D171F282D0C009DE002 /* ARChartHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D161F282D0C009DE002 /* ARChartHighlighter.swift */; };
 		20E02D191F283C6C009DE002 /* CABasicAnimation+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E02D181F283C6C009DE002 /* CABasicAnimation+Utilities.swift */; };
-		7D9C8E0E211BD8B800C23D0B /* AccountSnapshot_CumNet_Bar.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E0D211BD8B800C23D0B /* AccountSnapshot_CumNet_Bar.csv */; };
 		7D9C8E11211BDCA000C23D0B /* DataSample_2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */; };
 		7D9C8E12211BDCA000C23D0B /* DataSample_3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */; };
 		C36287461F0E084800B6598D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36287451F0E084800B6598D /* AppDelegate.swift */; };
@@ -80,7 +79,6 @@
 		20E02D141F281686009DE002 /* ARBarChartBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBarChartBar.swift; sourceTree = "<group>"; };
 		20E02D161F282D0C009DE002 /* ARChartHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARChartHighlighter.swift; sourceTree = "<group>"; };
 		20E02D181F283C6C009DE002 /* CABasicAnimation+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Utilities.swift"; sourceTree = "<group>"; };
-		7D9C8E0D211BD8B800C23D0B /* AccountSnapshot_CumNet_Bar.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AccountSnapshot_CumNet_Bar.csv; sourceTree = "<group>"; };
 		7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_2.csv; sourceTree = "<group>"; };
 		7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_3.csv; sourceTree = "<group>"; };
 		C36287421F0E084800B6598D /* ARChartsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARChartsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,7 +145,6 @@
 			children = (
 				7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */,
 				7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */,
-				7D9C8E0D211BD8B800C23D0B /* AccountSnapshot_CumNet_Bar.csv */,
 				20D557D01F1C0C3D00924685 /* DataSample_0.csv */,
 				C3C2EC6A1F2543D2001EC280 /* DataSample_1.csv */,
 			);
@@ -338,7 +335,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9C8E12211BDCA000C23D0B /* DataSample_3.csv in Resources */,
-				7D9C8E0E211BD8B800C23D0B /* AccountSnapshot_CumNet_Bar.csv in Resources */,
 				C36287521F0E084800B6598D /* LaunchScreen.storyboard in Resources */,
 				C362874F1F0E084800B6598D /* Assets.xcassets in Resources */,
 				20D557D31F1C0E0800924685 /* DataSample_0.csv in Resources */,
