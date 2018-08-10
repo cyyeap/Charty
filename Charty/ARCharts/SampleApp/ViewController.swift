@@ -164,6 +164,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         super.didReceiveMemoryWarning()
     }
     
+    override func prefersHomeIndicatorAutoHidden() -> Bool {
+        return true
+    }
+    
     // MARK - Setups
     
     var focusSquare = FocusSquare()
