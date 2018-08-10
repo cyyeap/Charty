@@ -35,9 +35,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1A-4c-dbi">
-                                <rect key="frame" x="172" y="415" width="30" height="33"/>
+                                <rect key="frame" x="164" y="412" width="47" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AdelleSans-Regular" family="Adelle Sans" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Regular" family="Adelle Sans" pointSize="24"/>
                                 <state key="normal" title="start"/>
                                 <connections>
                                     <action selector="tapStartButton:" destination="iqH-Pk-wnU" eventType="touchUpInside" id="3cX-sY-A5l"/>
