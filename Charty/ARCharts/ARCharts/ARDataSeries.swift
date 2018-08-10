@@ -82,7 +82,7 @@ public class ARDataSeries: ARBarChartDataSource, ARBarChartDelegate {
     
     public func barChart(_ barChart: ARBarChart, colorForBarAtIndex index: Int, forSeries series: Int) -> UIColor {
         if let barColors = barColors {
-            return barColors[(series * values[series].count + index) % barColors.count]
+            return barColors[(series) % barColors.count]
         }
         
         return UIColor.white
