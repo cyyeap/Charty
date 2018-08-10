@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wlO-c7-1ir">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wlO-c7-1ir">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -316,6 +317,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nlb-w9-QKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1760.5" y="35.5"/>
+        </scene>
+        <!--ImageRecognition-->
+        <scene sceneID="RHj-Y4-KBo">
+            <objects>
+                <viewController title="ImageRecognition" id="pAE-rQ-wvp" customClass="ImageRecognitionViewController" customModule="ARChartsSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8vl-oq-wKZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-dz-HSB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move camera around to detect images" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9Mq-FH-QfN">
+                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FEH-zb-T4W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plL-jS-LiY">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ege-tV-RUX"/>
+                                    <barButtonItem systemItem="refresh" id="Lr7-SK-ZVP">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="resetButtonDidTouch:" destination="pAE-rQ-wvp" id="Wbz-cq-11X"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JAb-9n-Wnc"/>
+                                </items>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="plL-jS-LiY" firstAttribute="top" secondItem="9Mq-FH-QfN" secondAttribute="bottom" id="DwH-N3-gU8"/>
+                            <constraint firstAttribute="bottom" secondItem="cW4-dz-HSB" secondAttribute="bottom" id="QHi-Qk-ua9"/>
+                            <constraint firstItem="cW4-dz-HSB" firstAttribute="top" secondItem="8vl-oq-wKZ" secondAttribute="top" id="Txw-HI-KeS"/>
+                            <constraint firstAttribute="trailing" secondItem="cW4-dz-HSB" secondAttribute="trailing" id="Zob-gV-vYc"/>
+                            <constraint firstAttribute="trailing" secondItem="9Mq-FH-QfN" secondAttribute="trailing" id="eE5-rJ-3Kt"/>
+                            <constraint firstItem="plL-jS-LiY" firstAttribute="bottom" secondItem="Cul-Im-rXr" secondAttribute="bottom" id="efV-Zu-uC2"/>
+                            <constraint firstItem="9Mq-FH-QfN" firstAttribute="leading" secondItem="8vl-oq-wKZ" secondAttribute="leading" id="f94-xa-Vjg"/>
+                            <constraint firstAttribute="trailing" secondItem="plL-jS-LiY" secondAttribute="trailing" id="kLS-0p-Ir7"/>
+                            <constraint firstItem="plL-jS-LiY" firstAttribute="leading" secondItem="8vl-oq-wKZ" secondAttribute="leading" id="lye-jo-lnt"/>
+                            <constraint firstItem="cW4-dz-HSB" firstAttribute="leading" secondItem="8vl-oq-wKZ" secondAttribute="leading" id="yRM-XF-TaD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cul-Im-rXr"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="9Mq-FH-QfN" id="j5R-Yy-t6B"/>
+                        <outlet property="sceneView" destination="cW4-dz-HSB" id="3qa-tb-jTg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzC-MX-an3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2729" y="35"/>
         </scene>
     </scenes>
     <resources>
