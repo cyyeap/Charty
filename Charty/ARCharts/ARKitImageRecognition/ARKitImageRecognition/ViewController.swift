@@ -174,8 +174,8 @@ extension ViewController: ARSCNViewDelegate {
             //node = mountainNode
         case "Trees In the Dark":
             node = treeNode
-        //case "Netwealth":
-            //node = netwealthNode
+        case "Netwealth":
+            node = netwealthNode
         //case "Apple":
             //node = appleNode
         //case "Nike":

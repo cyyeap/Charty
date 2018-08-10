@@ -95,7 +95,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         setupRotationGesture()
         setupHighlightGesture()
         
-        addLightSource(ofType: .ambient)
+        addLightSource(ofType: .omni)
     }
     
     override func viewWillAppear(_ animated: Bool) {
