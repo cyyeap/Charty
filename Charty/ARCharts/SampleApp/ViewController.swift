@@ -50,6 +50,34 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         UIColor(red: 255.0  / 255.0, green: 190.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
     ]
     
+    private let arKitColorsBlue = [
+        UIColor(red: 0.0 / 255.0, green: 53.0 / 255.0, blue: 142.0 / 255.0, alpha: 1.0),
+        UIColor(red: 0.0  / 255.0, green: 120.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0),
+        UIColor(red: 0.0 / 255.0, green: 199.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0),
+        UIColor(red: 0.0 / 255.0, green: 40.0 / 255.0, blue: 85.0 / 255.0, alpha: 1.0)
+    ]
+    
+    private let arKitColorsPurple = [
+        UIColor(red: 109.0 / 255.0, green: 0.0 / 255.0, blue: 99.0 / 255.0, alpha: 1.0),
+        UIColor(red: 240.0   / 255.0, green: 0.0 / 255.0, blue: 140.0 / 255.0, alpha: 1.0),
+        UIColor(red: 249.0 / 255.0, green: 125.0 / 255.0, blue: 217.0 / 255.0, alpha: 1.0),
+        UIColor(red: 51.0 / 255.0, green: 0.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
+    ]
+    
+    private let arKitColorsGreen = [
+        UIColor(red: 0.0  / 255.0, green: 94.0 / 255.0, blue: 46.0 / 255.0, alpha: 1.0),
+        UIColor(red: 0.0  / 255.0, green: 175.0 / 255.0, blue: 50.0 / 255.0, alpha: 1.0),
+        UIColor(red: 160.0  / 255.0, green: 220.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0),
+        UIColor(red: 0.0 / 255.0, green: 61.0 / 255.0, blue: 26.0 / 255.0, alpha: 1.0)
+    ]
+    
+    private let arKitColorsOrange = [
+        UIColor(red: 185.0  / 255.0, green: 10.0 / 255.0, blue: 45.0 / 255.0, alpha: 1.0),
+        UIColor(red: 255.0  / 255.0, green: 105.0 / 255.0, blue: 30.0 / 255.0, alpha: 1.0),
+        UIColor(red: 255.0  / 255.0, green: 190.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0),
+        UIColor(red: 63.0 / 255.0, green: 32.0 / 255.0, blue: 33.0 / 255.0, alpha: 1.0)
+    ]
+    
     var session: ARSession {
         return sceneView.session
     }
@@ -173,7 +201,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
             dataSeries?.spaceForIndexLabels = 0.0
             dataSeries?.spaceForIndexLabels = 0.0
         }
-        dataSeries?.barColors = arKitColors
+        dataSeries?.barColors = setupColor()
         dataSeries?.barOpacity = settings.barOpacity
         
         barChart = ARBarChart()
@@ -213,6 +241,24 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     private func setupHighlightGesture() {
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         self.view.addGestureRecognizer(longPressRecognizer)
+    }
+    
+    private func setupColor() -> [UIColor] {
+        switch settings.colourSet
+        {
+        case 0:
+            return arKitColors
+        case 1:
+            return arKitColorsBlue
+        case 2:
+            return arKitColorsPurple
+        case 3:
+            return arKitColorsGreen
+        case 4:
+            return arKitColorsOrange
+        default:
+            return arKitColors
+        }
     }
     
     // MARK: - ARSCNViewDelegate
