@@ -49,10 +49,18 @@ class ImageRecognitionViewController: UIViewController {
     }()
     
     lazy var bookNode: SCNNode = {
-        guard let scene = SCNScene(named: "book.scn"),
-            let node = scene.rootNode.childNode(withName: "book", recursively: false) else { return SCNNode() }
-        let scaleFactor  = 0.1
+        let material = SCNMaterial()
+        material.diffuse.contents = UIColor.blue
+        
+        let text = SCNText(string: "John Willey & Sons (NYSE: JW.A) 63.05 USD", extrusionDepth: 1)
+        text.materials = [material]
+        
+        let node = SCNNode()
+        let scaleFactor  = 0.01
         node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
+        node.eulerAngles.y += -.pi / 2
+        node.geometry = text
+        
         return node
     }()
     
@@ -70,7 +78,7 @@ class ImageRecognitionViewController: UIViewController {
         let material = SCNMaterial()
         material.diffuse.contents = UIColor.blue
         
-        let text = SCNText(string: "Netwealth", extrusionDepth: 1)
+        let text = SCNText(string: "Netwealth (ASX: NWL) 7.460 AUD ", extrusionDepth: 1)
         text.materials = [material]
         
         let node = SCNNode()
@@ -175,7 +183,7 @@ extension ImageRecognitionViewController: ARSCNViewDelegate {
         var node = SCNNode()
         switch name {
         case "Book":
-            node = netwealthNode//bookNode
+            node = bookNode
         //case "Snow Mountain":
             //node = mountainNode
         case "Trees In the Dark":
