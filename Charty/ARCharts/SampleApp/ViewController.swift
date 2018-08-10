@@ -20,7 +20,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var roundedButtonCollection: [UIButton]!
     
-    let accounts = ["Rate of Return - Last 5 Years ", "Asset Allocation", "Cumulative vs Monthly Return", "Portfolio Value vs Net Investment"]
+    let accounts = ["Rate of Return - Last 5 Years ", "Asset Allocation", "Cumulative vs Monthly Return", "Portfolio Value vs Net Investment", "ASX: NWL"]
 
     @IBAction func NavigateToImage(_ sender: Any) {
         self.performSegue(withIdentifier: "MoveToImage", sender: nil)
