@@ -21,6 +21,8 @@
 		609D2725211BE9B000589B0A /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609D2724211BE9B000589B0A /* WelcomeController.swift */; };
 		7D9C8E11211BDCA000C23D0B /* DataSample_2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */; };
 		7D9C8E12211BDCA000C23D0B /* DataSample_3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */; };
+		982C34D1211D0B960020792F /* ImageRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982C34CC211D0B960020792F /* ImageRecognitionViewController.swift */; };
+		982C34D2211D0B960020792F /* ImageRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982C34CC211D0B960020792F /* ImageRecognitionViewController.swift */; };
 		C36287461F0E084800B6598D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36287451F0E084800B6598D /* AppDelegate.swift */; };
 		C362874A1F0E084800B6598D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36287491F0E084800B6598D /* ViewController.swift */; };
 		C362874D1F0E084800B6598D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C362874B1F0E084800B6598D /* Main.storyboard */; };
@@ -95,6 +97,7 @@
 		609D2724211BE9B000589B0A /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_2.csv; sourceTree = "<group>"; };
 		7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_3.csv; sourceTree = "<group>"; };
+		982C34CC211D0B960020792F /* ImageRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRecognitionViewController.swift; sourceTree = "<group>"; };
 		C36287421F0E084800B6598D /* ARChartsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARChartsSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36287451F0E084800B6598D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36287491F0E084800B6598D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +208,7 @@
 				C36287451F0E084800B6598D /* AppDelegate.swift */,
 				C36287491F0E084800B6598D /* ViewController.swift */,
 				FC4628161F28688E0037FB5B /* SettingsTableViewController.swift */,
+				982C34CC211D0B960020792F /* ImageRecognitionViewController.swift */,
 				FC4628181F28EF040037FB5B /* Settings.swift */,
 				C362874B1F0E084800B6598D /* Main.storyboard */,
 				C3BD6FB11F1346820042479D /* Utilities.swift */,
@@ -402,6 +406,7 @@
 			files = (
 				FC4628191F28EF090037FB5B /* Settings.swift in Sources */,
 				609D2725211BE9B000589B0A /* WelcomeController.swift in Sources */,
+				982C34D1211D0B960020792F /* ImageRecognitionViewController.swift in Sources */,
 				C3BD6FB21F13470E0042479D /* Utilities.swift in Sources */,
 				FC4628171F2868920037FB5B /* SettingsTableViewController.swift in Sources */,
 				C3D4C4531F174B29001116AC /* FocusSquare.swift in Sources */,
@@ -414,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982C34D2211D0B960020792F /* ImageRecognitionViewController.swift in Sources */,
 				FCE582F61F2720F3002D469B /* ARChartPresenter.swift in Sources */,
 				20E02D171F282D0C009DE002 /* ARChartHighlighter.swift in Sources */,
 				2097B7FE1F2901DA00E06831 /* ARChartLabel.swift in Sources */,
