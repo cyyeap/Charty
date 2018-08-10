@@ -60,6 +60,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
+        print("Main - ViewDidLoad")
         super.viewDidLoad()
         
         accountPicker.delegate = self
@@ -98,6 +99,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("Main - ViewWillAppear")
+        
         super.viewWillAppear(animated)
         
         let configuration = ARWorldTrackingConfiguration()
@@ -110,6 +113,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        print("Main - ViewWillDisAppear")
         super.viewWillDisappear(animated)
         
         sceneView.session.pause()
