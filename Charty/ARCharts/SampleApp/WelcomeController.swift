@@ -32,8 +32,8 @@ class WelcomeController: UIViewController
     }
     
     @IBAction func tapStartButton(_ sender: UIButton) {
-        handleLogin()
-        return
+        //handleLogin()
+        //return
         
         context = LAContext()
         context.localizedFallbackTitle = "Use passcode?"
@@ -83,6 +83,7 @@ class WelcomeController: UIViewController
     
     private func handleLogin() {
         DispatchQueue.main.async { [unowned self] in
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateInitialViewController() as UIViewController?
             self.present(vc!, animated: true, completion: nil)

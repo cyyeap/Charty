@@ -52,14 +52,6 @@
             </objects>
             <point key="canvasLocation" x="-559.20000000000005" y="35.532233883058474"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="OhZ-mZ-pqf">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="Pvb-wm-THk" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C3S-Ww-5q5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="70" y="-36"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Logo" width="250" height="250"/>
