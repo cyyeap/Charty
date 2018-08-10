@@ -56,7 +56,7 @@ class ImageRecognitionViewController: UIViewController {
         text.materials = [material]
         
         let node = SCNNode()
-        let scaleFactor  = 0.01
+        let scaleFactor  = 0.005
         node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
         node.eulerAngles.y += -.pi / 2
         node.geometry = text
@@ -82,7 +82,7 @@ class ImageRecognitionViewController: UIViewController {
         text.materials = [material]
         
         let node = SCNNode()
-        let scaleFactor  = 0.01
+        let scaleFactor  = 0.005
         node.scale = SCNVector3(scaleFactor, scaleFactor, scaleFactor)
         node.eulerAngles.y += -.pi / 2
         node.geometry = text
