@@ -154,7 +154,7 @@ extension ViewController: ARSCNViewDelegate {
             overlayNode.runAction(self.fadeAndSpinAction)
             node.addChildNode(overlayNode)
             
-            self.label.text = "Image detected: \"\(imageName)\""
+            self.label.text = "Logo detected: \"\(imageName)\""
         }
     }
     
