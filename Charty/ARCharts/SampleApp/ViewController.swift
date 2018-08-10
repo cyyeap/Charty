@@ -20,7 +20,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var roundedButtonCollection: [UIButton]!
     
-    let accounts = ["Rate of Return - Last 5 Years ", "Asset Allocation", "Cumulative vs Monthly Return", "Portfolio Value vs Net Investment"]
+    let accounts = ["Rate of Return - Last 5 Years ", "Asset Allocation", "Cumulative vs Monthly Return", "Portfolio Value vs Net Investment", "ASX: NWL"]
 
     @IBAction func NavigateToImage(_ sender: Any) {
         self.performSegue(withIdentifier: "MoveToImage", sender: nil)
@@ -123,6 +123,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         
         setupFocusSquare()
         setupRotationGesture()
+        setupPinchGesture()
         setupHighlightGesture()
         
         addLightSource(ofType: .omni)
@@ -242,6 +243,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         self.view.addGestureRecognizer(rotationGestureRecognizer)
     }
     
+    private func setupPinchGesture() {
+        let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch))
+        self.view.addGestureRecognizer(pinchGestureRecognizer)
+    }
+    
     private func setupHighlightGesture() {
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         self.view.addGestureRecognizer(longPressRecognizer)
@@ -348,6 +354,23 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
             startingRotation = barChart.eulerAngles.y
         } else if rotationGestureRecognizer.state == .changed {
             self.barChart?.eulerAngles.y = startingRotation - Float(rotationGestureRecognizer.rotation)
+        }
+    }
+    
+    private var startingScale: SCNVector3 = SCNVector3Make(0.0,0.0,0.0)
+    
+    @objc func handlePinch(pinchGestureRecognizer: UIPinchGestureRecognizer) {
+        guard let barChart = barChart,
+            let pointOfView = sceneView.pointOfView,
+            sceneView.isNode(barChart, insideFrustumOf: pointOfView) == true else {
+                return
+        }
+        
+        if pinchGestureRecognizer.state == .began {
+            startingScale = barChart.scale
+        } else if pinchGestureRecognizer.state == .changed {
+            let newScale = (startingScale.y * Float(pinchGestureRecognizer.scale))
+            self.barChart?.scale = SCNVector3Make(newScale,newScale,newScale)
         }
     }
     

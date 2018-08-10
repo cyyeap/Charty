@@ -17,6 +17,7 @@
 		38141A97211C48F300454C7D /* Adelle Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38141A92211C48F200454C7D /* Adelle Sans Regular.ttf */; };
 		38141A98211C48F300454C7D /* Adelle Sans Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38141A93211C48F300454C7D /* Adelle Sans Light.ttf */; };
 		38141A99211C48F300454C7D /* Adelle Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38141A94211C48F300454C7D /* Adelle Sans Bold.ttf */; };
+		3837464E211D498000202340 /* DataSample_4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3837464D211D498000202340 /* DataSample_4.csv */; };
 		60480957211D1A9600DD8F17 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60480956211D1A9600DD8F17 /* Welcome.storyboard */; };
 		609D2725211BE9B000589B0A /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609D2724211BE9B000589B0A /* WelcomeController.swift */; };
 		7D9C8E11211BDCA000C23D0B /* DataSample_2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */; };
@@ -93,6 +94,7 @@
 		38141A92211C48F200454C7D /* Adelle Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adelle Sans Regular.ttf"; sourceTree = "<group>"; };
 		38141A93211C48F300454C7D /* Adelle Sans Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adelle Sans Light.ttf"; sourceTree = "<group>"; };
 		38141A94211C48F300454C7D /* Adelle Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Adelle Sans Bold.ttf"; sourceTree = "<group>"; };
+		3837464D211D498000202340 /* DataSample_4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_4.csv; sourceTree = "<group>"; };
 		60480956211D1A9600DD8F17 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		609D2724211BE9B000589B0A /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataSample_2.csv; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		20D557CF1F1C0C3D00924685 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3837464D211D498000202340 /* DataSample_4.csv */,
 				7D9C8E0F211BDCA000C23D0B /* DataSample_2.csv */,
 				7D9C8E10211BDCA000C23D0B /* DataSample_3.csv */,
 				20D557D01F1C0C3D00924685 /* DataSample_0.csv */,
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9C8E12211BDCA000C23D0B /* DataSample_3.csv in Resources */,
+				3837464E211D498000202340 /* DataSample_4.csv in Resources */,
 				38141A99211C48F300454C7D /* Adelle Sans Bold.ttf in Resources */,
 				38141A96211C48F300454C7D /* Adelle Sans Thin.ttf in Resources */,
 				38141A98211C48F300454C7D /* Adelle Sans Light.ttf in Resources */,
