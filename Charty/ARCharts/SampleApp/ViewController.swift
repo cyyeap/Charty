@@ -22,6 +22,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     
     let accounts = ["Rate of Return - Last 5 Years ", "Asset Allocation", "Cumulative vs Monthly Return", "Portfolio Value vs Net Investment"]
 
+    @IBAction func NavigateToImage(_ sender: Any) {
+        self.performSegue(withIdentifier: "MoveToImage", sender: nil)
+    }
     
     var barChart: ARBarChart?{
         didSet {

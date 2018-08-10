@@ -15,6 +15,9 @@ class ImageRecognitionViewController: UIViewController {
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var label: UILabel!
     
+    @IBAction func BackMain(_ sender: Any) {
+        self.performSegue(withIdentifier: "BackToMain", sender: nil)
+    }
     let fadeDuration: TimeInterval = 0.3
     let rotateDuration: TimeInterval = 3
     let waitDuration: TimeInterval = 15

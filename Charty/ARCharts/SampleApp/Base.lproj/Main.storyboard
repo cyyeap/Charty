@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,6 +24,10 @@
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpt-h8-HES">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="l8L-7X-eP8" appends="YES" id="pOu-Tf-zm3"/>
+                                </connections>
                             </arscnView>
                             <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEF-7m-bVU">
                                 <rect key="frame" x="137.5" y="612" width="120" height="30"/>
@@ -83,6 +88,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="nEF-7m-bVU" secondAttribute="bottom" constant="25" id="zfM-33-dgm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DVJ-Jp-6rj"/>
                     <connections>
                         <outlet property="accountPicker" destination="Coi-je-wKO" id="0TX-3e-VE9"/>
                         <outlet property="pieChartButton" destination="nEF-7m-bVU" id="e0N-Ug-61y"/>
@@ -90,11 +96,17 @@
                         <outlet property="settingsButton" destination="4zr-Va-MAu" id="Scf-f0-uqB"/>
                         <outletCollection property="roundedButtonCollection" destination="nEF-7m-bVU" collectionClass="NSMutableArray" id="1iv-3s-MSG"/>
                         <outletCollection property="roundedButtonCollection" destination="4zr-Va-MAu" collectionClass="NSMutableArray" id="gma-xc-a0K"/>
+                        <segue destination="pAE-rQ-wvp" kind="show" identifier="MoveToImage" animates="NO" id="45I-bx-czh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="l8L-7X-eP8">
+                    <connections>
+                        <action selector="NavigateToImage:" destination="BV1-FR-VrT" id="V27-l5-py0"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="160.80000000000001" y="35.532233883058474"/>
+            <point key="canvasLocation" x="207" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YRu-1h-cSo">
@@ -280,9 +292,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-dz-HSB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move camera around to detect images" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9Mq-FH-QfN">
                                 <rect key="frame" x="0.0" y="579" width="375" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -307,6 +316,13 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-dz-HSB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gES-Xj-dJI" appends="YES" id="0wR-om-XCs"/>
+                                </connections>
+                            </arscnView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -323,14 +339,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cul-Im-rXr"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qeN-03-0EY"/>
                     <connections>
                         <outlet property="label" destination="9Mq-FH-QfN" id="j5R-Yy-t6B"/>
                         <outlet property="sceneView" destination="cW4-dz-HSB" id="3qa-tb-jTg"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="BackToMain" animates="NO" id="emp-Od-Sww"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzC-MX-an3" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="gES-Xj-dJI">
+                    <connections>
+                        <action selector="BackMain:" destination="pAE-rQ-wvp" id="mlU-Oh-WQ9"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2729" y="35"/>
+            <point key="canvasLocation" x="-1106" y="36"/>
         </scene>
     </scenes>
     <resources>
