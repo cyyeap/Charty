@@ -43,7 +43,8 @@ class SettingsTableViewController: UITableViewController {
         widthLabel.text = String(format: "Width: %.1f", settings.graphWidth)
         heightLabel.text = String(format: "Height: %.1f", settings.graphHeight)
         lengthLabel.text = String(format: "Length: %.1f", settings.graphLength)
-        dataSetSegmentedControl.selectedSegmentIndex = settings.dataSet
+        dataSetSegmentedControl.selectedSegmentIndex = settings.colourSet
+        //colourSetSegmentedControl.selectedSegmentIndex = settings.index(forColourSetType: settings.colourSetType)
         //if dataSetSegmentedControl.selectedSegmentIndex != 0 {
             //randomDataSetCell.isHidden = true
         //} else {
@@ -74,7 +75,7 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func handleDataSetValueChange(_ sender: UISegmentedControl) {
-        settings?.dataSet = sender.selectedSegmentIndex
+        settings?.colourSet = sender.selectedSegmentIndex
         //if sender.selectedSegmentIndex == 0 {
         //    randomDataSetCell.isHidden = false
         //} else {
