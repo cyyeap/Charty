@@ -8,52 +8,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Adelle Sans Regular.ttf">
-            <string>AdelleSans-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
-        <!--Welcome Controller-->
-        <scene sceneID="fRv-N4-U32">
-            <objects>
-                <viewController id="wlO-c7-1ir" customClass="WelcomeController" customModule="ARChartsSampleApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JTe-cJ-szv"/>
-                        <viewControllerLayoutGuide type="bottom" id="yXU-Ms-16S"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="v18-zU-I4t">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NW Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Rae-Cj-CZm">
-                                <rect key="frame" x="20" y="30" width="36" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="AMb-te-O0v">
-                                <rect key="frame" x="67" y="157" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRv-DS-mv4">
-                                <rect key="frame" x="172" y="415" width="30" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AdelleSans-Regular" family="Adelle Sans" pointSize="15"/>
-                                <state key="normal" title="start"/>
-                                <connections>
-                                    <action selector="tapStartButton:" destination="wlO-c7-1ir" eventType="touchUpInside" id="JBY-ce-fFb"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <connections>
-                        <segue destination="BV1-FR-VrT" kind="show" identifier="WelcomeSegue" id="ZzA-2z-Gqa"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tcu-XB-23l" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-559.20000000000005" y="35.532233883058474"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -379,9 +334,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="250" height="250"/>
         <image name="Market Summary" width="24" height="24"/>
-        <image name="NW Logo" width="96" height="96"/>
         <image name="Settings" width="24" height="24"/>
     </resources>
 </document>

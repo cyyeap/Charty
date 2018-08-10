@@ -14,8 +14,6 @@ import UIKit
 
 class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIPopoverPresentationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var lineChartButton: UIButton!
-    @IBOutlet weak var barChartButton: UIButton!
     @IBOutlet weak var pieChartButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var accountPicker: UIPickerView!
@@ -56,6 +54,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     var screenCenter: CGPoint?
     var settings = Settings()
     var dataSeries: ARDataSeries?
+    var configuration = ARWorldTrackingConfiguration()
     
     // MARK: - Life Cycle
     
@@ -96,6 +95,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         setupHighlightGesture()
         
         addLightSource(ofType: .omni)
+        
+        print("Main - viewDidLoad - Finish")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,13 +104,22 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
         
         super.viewWillAppear(animated)
         
-        let configuration = ARWorldTrackingConfiguration()
+        configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
         sceneView.session.configuration?.isLightEstimationEnabled = true
         sceneView.session.run(configuration)
         sceneView.delegate = self
         
         screenCenter = self.sceneView.bounds.mid
+        
+        print("Main - Finish ViewWillAppear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("Main - ViewDidAppear")
+        super.viewDidAppear(animated)
+        
+        print("Main - ViewDidAppear - Finish")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -220,14 +230,24 @@ class ViewController: UIViewController, ARSCNViewDelegate, SettingsDelegate, UIP
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
-        // TODO: Present an error message to the user
+        print("failed with error")
+        
+        restartSessionWithoutDelete()
+    }
+    @objc func restartSessionWithoutDelete() {
+        self.sceneView.session.pause()
+        self.sceneView.session.run(configuration, options: [
+            .resetTracking,
+            .removeExistingAnchors])
     }
     
     func sessionWasInterrupted(_ session: ARSession) {
+        print("failed with error - Session Interrupted (Start)")
         // TODO: Inform the user that the session has been interrupted, for example, by presenting an overlay
     }
     
     func sessionInterruptionEnded(_ session: ARSession) {
+        print("failed with error - Session Interrupted (End)")
         // TODO: Reset tracking and/or remove existing anchors if consistent tracking is required
     }
     
