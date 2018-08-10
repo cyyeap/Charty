@@ -50,7 +50,7 @@ class ImageRecognitionViewController: UIViewController {
     
     lazy var bookNode: SCNNode = {
         let material = SCNMaterial()
-        material.diffuse.contents = UIColor.blue
+        material.diffuse.contents = UIColor(red: 0.0 / 255.0, green: 53.0 / 255.0, blue: 142.0 / 255.0, alpha: 1.0)
         
         let text = SCNText(string: "John Willey & Sons (NYSE: JW.A) 63.05 USD", extrusionDepth: 1)
         text.materials = [material]
@@ -76,7 +76,7 @@ class ImageRecognitionViewController: UIViewController {
     
     lazy var netwealthNode: SCNNode = {
         let material = SCNMaterial()
-        material.diffuse.contents = UIColor.blue
+        material.diffuse.contents = UIColor(red: 0.0 / 255.0, green: 53.0 / 255.0, blue: 142.0 / 255.0, alpha: 1.0)
         
         let text = SCNText(string: "Netwealth (ASX: NWL) 7.460 AUD ", extrusionDepth: 1)
         text.materials = [material]
