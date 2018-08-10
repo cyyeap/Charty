@@ -83,7 +83,10 @@ class WelcomeController: UIViewController
     
     private func handleLogin() {
         DispatchQueue.main.async { [unowned self] in
-            self.performSegue(withIdentifier: "WelcomeSegue", sender: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateInitialViewController() as UIViewController?
+            self.present(vc!, animated: true, completion: nil)
+            //self.performSegue(withIdentifier: "WelcomeSegue", sender: nil)
         }
     }
 }
