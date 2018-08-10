@@ -100,7 +100,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="l8L-7X-eP8">
+                <swipeGestureRecognizer delaysTouchesBegan="YES" direction="left" id="l8L-7X-eP8">
                     <connections>
                         <action selector="NavigateToImage:" destination="BV1-FR-VrT" id="V27-l5-py0"/>
                     </connections>
@@ -292,6 +292,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-dz-HSB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gES-Xj-dJI" appends="YES" id="0wR-om-XCs"/>
+                                </connections>
+                            </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move camera around to detect images" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9Mq-FH-QfN">
                                 <rect key="frame" x="0.0" y="579" width="375" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -316,13 +323,6 @@
                                 </items>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-dz-HSB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gES-Xj-dJI" appends="YES" id="0wR-om-XCs"/>
-                                </connections>
-                            </arscnView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -342,12 +342,12 @@
                     <navigationItem key="navigationItem" id="qeN-03-0EY"/>
                     <connections>
                         <outlet property="label" destination="9Mq-FH-QfN" id="j5R-Yy-t6B"/>
-                        <outlet property="sceneView" destination="cW4-dz-HSB" id="3qa-tb-jTg"/>
+                        <outlet property="sceneView" destination="cW4-dz-HSB" id="K81-gr-LLd"/>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="BackToMain" animates="NO" id="emp-Od-Sww"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzC-MX-an3" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="gES-Xj-dJI">
+                <swipeGestureRecognizer delaysTouchesBegan="YES" direction="right" id="gES-Xj-dJI">
                     <connections>
                         <action selector="BackMain:" destination="pAE-rQ-wvp" id="mlU-Oh-WQ9"/>
                     </connections>
