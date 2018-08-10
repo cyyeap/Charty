@@ -159,7 +159,7 @@ extension ImageRecognitionViewController: ARSCNViewDelegate {
             overlayNode.runAction(self.fadeAndSpinAction)
             node.addChildNode(overlayNode)
             
-            self.label.text = "Image detected: \"\(imageName)\""
+            self.label.text = "Logo detected: \"\(imageName)\""
         }
     }
     
@@ -180,8 +180,8 @@ extension ImageRecognitionViewController: ARSCNViewDelegate {
             //node = mountainNode
         case "Trees In the Dark":
             node = treeNode
-        //case "Netwealth":
-            //node = netwealthNode
+        case "Netwealth":
+            node = netwealthNode
         //case "Apple":
             //node = appleNode
         //case "Nike":
