@@ -167,7 +167,14 @@ extension ImageRecognitionViewController: ARSCNViewDelegate {
             overlayNode.runAction(self.fadeAndSpinAction)
             node.addChildNode(overlayNode)
             
-            self.label.text = "Logo detected: \"\(imageName)\""
+            if (imageName == "Book")
+            {
+               self.label.text = "Logo detected: Wiley"
+            }
+            else
+            {
+               self.label.text = "Logo detected: \"\(imageName)\""
+            }
         }
     }
     
